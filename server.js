@@ -66,13 +66,13 @@ var auth = function (req, res, next) {
     if (!user || !user.name || !user.pass) {
         res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
         res.sendStatus(401);
-    }
-    if (user && user.name === config.username && user.pass === config.password) {
-        next();
-    } else {
-        res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
-        res.sendStatus(401);
-    }
+    } else
+        if (user && user.name === config.username && user.pass === config.password) {
+            next();
+        } else {
+            res.set('WWW-Authenticate', 'Basic realm=Authorization Required');
+            res.sendStatus(401);
+        }
 };
 
 router.get('/latest', auth, function(req, res) {
@@ -134,9 +134,9 @@ router.get('/trackerlist', auth, function(req, res) {
 app.use('/api', router);
 
 app.get("/", auth, function(req, res) {
-    res.render("index");
+    res.render("index", {apiKey: config.googleMapsAPIKey});
 });
 
-app.listen(httpPort, function () {
+app.listen(config.httpPort, function () {
     console.log('GeoServer listening on port 8181!');
 });

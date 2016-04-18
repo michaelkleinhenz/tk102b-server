@@ -15,7 +15,9 @@ You will need node, npm and bower already installed. Use Google on how to instal
 
 # Launching the service
 
-Set the configuration parameters in config.json (an example is provided. Then launch the server with
+Set the configuration parameters in config.json (an example is provided). You can get a Google Maps API Key 
+from the Google Developers Console (use Google). Make sure you have enabled the "Maps API for JavaScript" for 
+your API key. Then launch the server with
 
 ```
 node server.js
