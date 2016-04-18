@@ -4,7 +4,7 @@ var config = require(process.env.CONFIGFILE || "./config.json");
 var net = require('net');
 var Datastore = require('nedb');
 
-var db = new Datastore({ filename: 'database', autoload: true });
+var db = new Datastore({ filename: config.databasePath, autoload: true });
 
 var server = net.createServer(function(socket) {
 
@@ -138,5 +138,6 @@ app.get("/", auth, function(req, res) {
 });
 
 app.listen(config.httpPort, function () {
-    console.log('GeoServer listening on port 8181!');
+    console.log('GeoServer frontend listening on port ' + config.httpPort);
+    console.log('Tracking listening on port ' + config.trackingPort);
 });
