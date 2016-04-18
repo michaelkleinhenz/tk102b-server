@@ -69,3 +69,8 @@ documentation on the format. It is similar to the crontab format.
 The last command starts the tracking. If the tracker's battery goes dead or the server crashes or is unavailable, the
 tracker might give up on sending tracking info. In this case, send the interval message again to restart the tracking.
 
+# Accessing the Frontend
+
+The GPS tracker will start to send tracking data messages to the service. You can see the last received tracking message by
+visiting your server on the `httpPort` port. The frontend provides multi tracker support and the feature to see the latest 
+as well as interval tracking information (plotted as a polyline on the map with the messages as nodes).
