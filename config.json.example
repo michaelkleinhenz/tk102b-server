@@ -1,0 +1,6 @@
+{
+    "username": "admin",
+    "password": "admin",
+    "port": 8080,
+    "databasePath": "database"
+}

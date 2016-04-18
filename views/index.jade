@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title Tracker Info
+    script(type="text/javascript" src="bower_components/jquery/dist/jquery.min.js")
+    script(type="text/javascript" src="bower_components/datetimepicker/build/jquery.datetimepicker.full.min.js")
+    link(type="text/css" rel="stylesheet" href="bower_components/datetimepicker/jquery.datetimepicker.css")
+    style(type="text/css").
+      html, body { height: 100%; margin: 0; padding: 0; font-family: sans-serif}
+      #map { height: 90%; }
+  body(style="width:100%;height:100%;margin:0;padding:0")
+    div(style="height:10%;display:table-row")
+        div(style="padding:1em;display:table-cell;width:60%")
+            span Start:&nbsp;
+            input(id="dtpStart" type="text")
+            span &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            span End:&nbsp;
+            input(id="dtpEnd" type="text")
+            span &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            span Tracker:&nbsp;
+            select(class="trackerId" id="rangeTracker")
+            span &nbsp;&nbsp;
+            button(id="plot") Show
+        div(style="padding:1em;display:table-cell;width:40%;text-align:right")
+            span Show latest from tracker:&nbsp;
+            select(class="trackerId" id="showTracker")
+            span &nbsp;&nbsp;
+            button(id="show") Show
+    div(id="map")
+    script(type="text/javascript" src="script.js")
+    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAM7wzVCni7wPboJWi_0sYn6s4aJJyX1_8&callback=initMap")

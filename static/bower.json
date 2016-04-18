@@ -1,0 +1,8 @@
+{
+  "name": "tk102b-server",
+  "directory": "static",
+  "dependencies": {
+    "jquery": "2.2.3",
+    "datetimepicker": "2.5.3"
+  }
+}

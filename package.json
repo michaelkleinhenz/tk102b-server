@@ -1,0 +1,12 @@
+{
+  "name": "tk102b-server",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {},
+  "dependencies": {
+    "basic-auth": "^1.0.3",
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "nedb": "^1.8.0"
+  }
+}
