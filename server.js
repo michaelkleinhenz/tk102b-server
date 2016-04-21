@@ -119,7 +119,7 @@ router.get('/trackerlist', auth, function(req, res) {
             res.send(500, err.message);
         else
             if (docs) {
-                var list = [ docs[0].trackerId ];
+                var list = [];
                 for (var i=0; i<docs.length; i++) {
                     if (list.indexOf(docs[i].trackerId)==-1)
                         list.push(docs[i].trackerId);
@@ -139,5 +139,5 @@ app.get("/", auth, function(req, res) {
 
 app.listen(config.httpPort, function () {
     console.log('GeoServer frontend listening on port ' + config.httpPort);
-    console.log('Tracking listening on port ' + config.trackingPort);
+    console.log('Tracking listening on port ' + config.trackerPort);
 });

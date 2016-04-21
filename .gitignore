@@ -4,4 +4,5 @@
 /static/bower_components
 /node_modules
 /.idea
+/.DS_Store
 # Created by .ignore support plugin (hsz.mobi)

@@ -1,7 +1,8 @@
 {
     "username": "admin",
     "password": "admin",
-    "port": 8080,
+    "trackerPort": 8844,
+    "httpPort": 8080,
     "databasePath": "database",
-    "googleMapsAPIKey": "YOURAPIKEY"
+    "googleMapsAPIKey": "APIKEY"
 }
